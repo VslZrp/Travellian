@@ -695,7 +695,7 @@ h2::after {
 .form-main-page__input {
   width: 100%;
   min-height: 1.6875rem;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-family: "Playfair Display";
   font-style: normal;
   font-weight: 400;
@@ -712,7 +712,11 @@ h2::after {
   -moz-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
+.form-main-page__input:focus::placeholder {
+  opacity: 0;
+}
 .form-main-page__input::-moz-placeholder {
+  opacity: 1;
   color: #172432;
   font-family: "Playfair Display";
   font-weight: 400;
@@ -720,11 +724,13 @@ h2::after {
   font-size: 1.25rem;
 }
 .form-main-page__input::placeholder {
+  opacity: 1;
   color: #172432;
   font-family: "Playfair Display";
   font-weight: 400;
   line-height: normal;
   font-size: 1.25rem;
+  transition: 0.3s;
 }
 .form-main-page__input[type="date"] {
   position: relative;
